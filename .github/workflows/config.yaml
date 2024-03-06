@@ -1,0 +1,13 @@
+name: GitHub Actions Demo
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo " Lors du lancement de la pipeLine "
+      - run: echo " ls la"
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - run: node hello.js
+      - run: ls la
